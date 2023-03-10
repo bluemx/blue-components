@@ -3,7 +3,7 @@
 # Instalación
 
 ```html
-<script src="https://unpkg.com/@bluemx/blue-components/dist/blue-components.js"></script>
+<script src="https://unpkg.com/@bluemx/blue-components"></script>
 ```
 
 # Componentes
