@@ -1,5 +1,9 @@
 # Blue-Components
 
+# Demo
+
+[Codepen](https://codepen.io/ealbinu/pen/abaEWqN?editors=1000)
+
 # Instalación
 
 ```html
@@ -33,8 +37,8 @@ Ejemplo:
 Carga la pleca blue.
 
 ### Uso:
-Añadir **&lt;BlueFooter&gt;&lt;/BlueFooter&gt;** en html.
+Añadir **&lt;blue-footer&gt;&lt;/blue-footer&gt;** en html.
 
 ```html
-<BlueFooter></BlueFooter>
+<blue-footer></blue-footer>
 ```
