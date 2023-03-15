@@ -20,7 +20,7 @@ Muestra la aceptación de cookies.
 Llamar a la función BlueCookies()
 
 ```js
-BlueCookies(id, mainText, acceptedText, buttonText, customStyle) 
+BlueCookies(mainText, acceptedText, buttonText, customStyle, id) 
 ```
 
 - **id**: Id único para el almacenamiento del localstorage. Debe ser diferente para cada sitio.
@@ -33,7 +33,7 @@ Ejemplo:
 
 ```html
   <script>
-    BlueCookies("cookiesconsent", "Do you consent to the use of cookies?", "✔ Cookies", "Accept", "background-color: #8bb8e8; color:#fff;")
+    BlueCookies("Do you consent to the use of cookies?", "✔ Cookies", "Accept", "background-color: #8bb8e8; color:#fff;", "cookiesconsent")
   </script>
 ```
 

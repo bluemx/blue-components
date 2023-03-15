@@ -9,7 +9,7 @@ const BlueCookiesRemove = (container) => {
         }
       );
   }
-  const BlueCookies = (cookieid, information, accepted, button, style) => {
+  const BlueCookies = (information, accepted, button, style, cookieid) => {
     const localstoragekey = 'bluecookies-'+cookieid
     const cookiesAccepted = localStorage.getItem(localstoragekey)
     const el = document.createElement('div');
