@@ -9,8 +9,9 @@ const BlueCookiesRemove = (container) => {
         }
       );
   }
-  const BlueCookies = (information, accepted, button, style) => {
-    const cookiesAccepted = localStorage.getItem('blue_cookies_consent')
+  const BlueCookies = (cookieid, information, accepted, button, style) => {
+    const localstoragekey = 'bluecookies-'+cookieid
+    const cookiesAccepted = localStorage.getItem(localstoragekey)
     const el = document.createElement('div');
     el.setAttribute(
       'style',
@@ -56,7 +57,7 @@ const BlueCookiesRemove = (container) => {
     );
     
     acceptBtn.addEventListener('click', ()=>{
-      localStorage.setItem('blue_cookies_consent', true)
+      localStorage.setItem(localstoragekey, true)
       BlueCookiesRemove(el)
     })
   
