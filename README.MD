@@ -41,11 +41,32 @@ Ejemplo:
 
 ## BlueFooter
 
-Carga la pleca blue.
+Carga el footer blue.
 
 ### Uso:
 Añadir **&lt;blue-footer&gt;&lt;/blue-footer&gt;** en html.
 
 ```html
 <blue-footer></blue-footer>
+```
+
+Usar no-powered quita "powered by".
+
+```html
+<blue-footer no-powered></blue-footer>
+```
+
+
+
+---
+
+## BluePleca
+
+Carga la pleca blue de colores con una altura de 6 pixeles y ancho al 100%.
+
+### Uso:
+Añadir **&lt;blue-pleca&gt;&lt;/blue-pleca&gt;** en html.
+
+```html
+<blue-pleca></blue-pleca>
 ```

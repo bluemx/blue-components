@@ -5,13 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blue Components</title>
+    <!-- Include Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        
+    </style>
 </head>
-<body>
+<body class="bg-gray-100">
+
+    <h1 class="text-center p-2 font-bold text-blue-800 text-5xl">Pleca</h1>
+    <textarea disabled class="w-full  bg-gray-200 text-center h-8 p-1 text-xs"><blue-pleca ></blue-pleca></textarea>
+    <div class="my-10">
+        <blue-pleca ></blue-pleca>
+    </div>
+
     
-    <blue-footer></blue-footer>
+    <!-- Blue footer components with Tailwind -->
+    <textarea disabled class="w-full  bg-gray-200 text-center h-8 p-1 text-xs"><blue-footer no-powered></blue-footer></textarea>
+    <div class="my-10">
+        <blue-footer no-powered ></blue-footer>
+    </div>
+    <textarea disabled class="w-full  bg-gray-200 text-center h-8 p-1 text-xs"><blue-footer></blue-footer></textarea>
+    <div class="my-10">
+        <blue-footer></blue-footer>
+    </div>
 
+    <div class="my-10">
+        <textarea disabled class="w-full  bg-gray-200 text-center h-8 p-1 text-xs "><script>BlueCookies("Do you consent to the use of cookies?", "✔ Cookies", "Accept", "background-color: #8bb8e8; color:#fff;", "cookiesconsent")</script></textarea>
+        
+    </div>
 
+    <!--
     <script src="https://unpkg.com/@bluemx/blue-components"></script>
+    -->
+    <!--
+    -->
+    <script src="src/BlueCookies.js"></script>
+    <script src="src/BlueFooter.js"></script>
+    <script src="src/BluePleca.js"></script>
+    <!--
+        <script src="index.js"></script>
+    -->
     <script>
         BlueCookies("Do you consent to the use of cookies?", "✔ Cookies", "Accept", "background-color: #8bb8e8; color:#fff;", "cookiesconsent")
     </script>
