@@ -19,7 +19,7 @@ class BluePleca extends HTMLElement {
         this.intersectionObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    console.log('Element is in viewport');
+
                     this.animatePleca(div);
                 }
             });
@@ -71,7 +71,7 @@ class BluePleca extends HTMLElement {
     animatePleca(thedivs) {
         const plecaDivs = thedivs.querySelectorAll('.bc-pcol');
         plecaDivs.forEach((div, index) => {
-            console.log(div)
+
             div.style.animation = 'none';
             div.offsetHeight;
             div.style.animation = `animateHeight 0.8s forwards ${index * 0.1}s`;

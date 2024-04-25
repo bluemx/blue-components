@@ -17,7 +17,7 @@ const BlueCookiesRemove=container=>{container.animate([{transform:"translateY(0p
                 <div><div class="bc-pcol"></div></div>
                 <div><div class="bc-pcol"></div></div>
             </div>
-            `,this.intersectionObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{entry.isIntersecting&&(console.log("Element is in viewport"),this.animatePleca(div))})},{root:null,rootMargin:"0px",threshold:.1}),this.intersectionObserver.observe(this);var style=document.createElement("style");style.textContent=`
+            `,this.intersectionObserver=new IntersectionObserver(entries=>{entries.forEach(entry=>{entry.isIntersecting&&this.animatePleca(div)})},{root:null,rootMargin:"0px",threshold:.1}),this.intersectionObserver.observe(this);var style=document.createElement("style");style.textContent=`
             .bluecomponents-pleca {
                 width: 100%;
                 height: 6px;
@@ -51,4 +51,4 @@ const BlueCookiesRemove=container=>{container.animate([{transform:"translateY(0p
                 20% { height: 160%;  }
                 100% { height: 100%; }
             }
-        `,shadow.appendChild(style),shadow.appendChild(div)}animatePleca(thedivs){thedivs.querySelectorAll(".bc-pcol").forEach((div,index)=>{console.log(div),div.style.animation="none",div.offsetHeight,div.style.animation=`animateHeight 0.8s forwards ${.1*index}s`})}}customElements.define("blue-pleca",BluePleca);
+        `,shadow.appendChild(style),shadow.appendChild(div)}animatePleca(thedivs){thedivs.querySelectorAll(".bc-pcol").forEach((div,index)=>{div.style.animation="none",div.offsetHeight,div.style.animation=`animateHeight 0.8s forwards ${.1*index}s`})}}customElements.define("blue-pleca",BluePleca);
