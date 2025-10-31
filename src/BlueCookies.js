@@ -9,7 +9,7 @@ const BlueCookiesRemove = (container) => {
         }
       );
   }
-  const BlueCookies = (information, accepted, button, style, cookieid) => {
+  const BlueCookies = (information, accepted, button, style, cookieid, callback) => {
     const localstoragekey = 'bluecookies-'+cookieid
     const cookiesAccepted = localStorage.getItem(localstoragekey)
     const el = document.createElement('div');
@@ -58,6 +58,10 @@ const BlueCookiesRemove = (container) => {
     
     acceptBtn.addEventListener('click', ()=>{
       localStorage.setItem(localstoragekey, true)
+      // Execute callback function if provided
+      if (callback && typeof callback === 'function') {
+        callback()
+      }
       BlueCookiesRemove(el)
     })
   

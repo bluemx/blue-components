@@ -20,7 +20,7 @@ Muestra la aceptación de cookies.
 Llamar a la función BlueCookies()
 
 ```js
-BlueCookies(mainText, acceptedText, buttonText, customStyle, id) 
+BlueCookies(mainText, acceptedText, buttonText, customStyle, id, callback) 
 ```
 
 - **id**: Id único para el almacenamiento del localstorage. Debe ser diferente para cada sitio.
@@ -28,12 +28,34 @@ BlueCookies(mainText, acceptedText, buttonText, customStyle, id)
 - **acceptedText**: HTLM/texto a mostrar cuando ya se ha aceptado.+
 - **buttonText**: Texto del botón.
 - **customStyle**: Css aplicado al contenedor.
+- **callback** *(opcional)*: Función JavaScript a ejecutar cuando se acepta las cookies.
 
-Ejemplo:
+Ejemplo básico:
 
 ```html
   <script>
     BlueCookies("Do you consent to the use of cookies?", "✔ Cookies", "Accept", "background-color: #8bb8e8; color:#fff;", "cookiesconsent")
+  </script>
+```
+
+Ejemplo con callback:
+
+```html
+  <script>
+    BlueCookies(
+      "Do you consent to the use of cookies?", 
+      "✔ Cookies", 
+      "Accept", 
+      "background-color: #8bb8e8; color:#fff;", 
+      "cookiesconsent",
+      function() {
+        console.log("Cookies accepted!");
+        // Tu código personalizado aquí
+        gtag('consent', 'update', {
+          'analytics_storage': 'granted'
+        });
+      }
+    )
   </script>
 ```
 
