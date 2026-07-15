@@ -78,6 +78,12 @@ Usar no-powered quita "powered by".
 <blue-footer no-powered></blue-footer>
 ```
 
+Usar `dark` en fondos oscuros cambia a blanco la sección `.cls-2` del logotipo.
+
+```html
+<blue-footer dark></blue-footer>
+```
+
 
 
 ---
