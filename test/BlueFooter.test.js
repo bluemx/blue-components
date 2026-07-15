@@ -56,7 +56,8 @@ for (const file of files) {
         footer.connectedCallback();
 
         const html = footer.shadowRoot.children[0].innerHTML;
-        assert.match(html, /\.cls-2\{fill:#fff;\}/);
+        assert.match(html, /\.cls-1\{fill:#fff;\}/);
+        assert.match(html, /\.cls-2\{fill:#8ab7e9;\}/);
     });
 
     test(`${file} keeps the default fill without dark`, () => {
@@ -67,6 +68,7 @@ for (const file of files) {
         footer.connectedCallback();
 
         const html = footer.shadowRoot.children[0].innerHTML;
+        assert.match(html, /\.cls-1\{fill:#011e41;\}/);
         assert.match(html, /\.cls-2\{fill:#8ab7e9;\}/);
     });
 
@@ -80,6 +82,7 @@ for (const file of files) {
         footer.attributeChangedCallback('dark', null, '');
 
         const html = footer.shadowRoot.children[0].innerHTML;
-        assert.match(html, /\.cls-2\{fill:#fff;\}/);
+        assert.match(html, /\.cls-1\{fill:#fff;\}/);
+        assert.match(html, /\.cls-2\{fill:#8ab7e9;\}/);
     });
 }
