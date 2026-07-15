@@ -70,6 +70,7 @@ for (const file of files) {
         const html = footer.shadowRoot.children[0].innerHTML;
         assert.match(html, /\.cls-1\{fill:#011e41;\}/);
         assert.match(html, /\.cls-2\{fill:#8ab7e9;\}/);
+        assert.match(html, /width: 166px; margin-left: auto;/);
     });
 
     test(`${file} reacts when dark changes`, () => {
