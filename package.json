@@ -1,10 +1,10 @@
 {
   "name": "@bluemx/blue-components",
-  "version": "0.6.7",
+  "version": "0.6.8",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --test",
     "build": "uglifyjs src/*.js --compress  -o index.js"
   },
   "repository": {

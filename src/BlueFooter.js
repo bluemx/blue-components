@@ -1,8 +1,25 @@
 class BlueFooter extends HTMLElement {
     constructor() {
         super();
+        this.attachShadow({ mode: 'open' });
+    }
 
-        const shadow = this.attachShadow({ mode: 'open' });
+    static get observedAttributes() {
+        return ['dark', 'no-powered'];
+    }
+
+    connectedCallback() {
+        this.render();
+    }
+
+    attributeChangedCallback() {
+        if (this.isConnected) {
+            this.render();
+        }
+    }
+
+    render() {
+        const shadow = this.shadowRoot;
         const hidePowered = this.hasAttribute('no-powered');
         const darkBackground = this.hasAttribute('dark');
 
@@ -20,7 +37,7 @@ class BlueFooter extends HTMLElement {
                 </a>
             </div>`;
 
-        shadow.appendChild(div);
+        shadow.replaceChildren(div);
     }
 }
 customElements.define('blue-footer', BlueFooter);
