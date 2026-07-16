@@ -1,10 +1,10 @@
 {
   "name": "@bluemx/blue-components",
-  "version": "0.6.6",
+  "version": "0.6.12",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "node --test",
     "build": "uglifyjs src/*.js --compress  -o index.js"
   },
   "repository": {
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/bluemx/blue-components/issues"
   },
-  "homepage": "https://github.com/bluemx/blue-components#readme"
+  "homepage": "https://github.com/bluemx/blue-components#readme",
+  "devDependencies": {
+    "uglify-js": "3.17.4"
+  }
 }

@@ -78,6 +78,18 @@ Usar no-powered quita "powered by".
 <blue-footer no-powered></blue-footer>
 ```
 
+Usar `dark` en fondos oscuros cambia a blanco la sección `.cls-1` del logotipo.
+
+```html
+<blue-footer dark></blue-footer>
+```
+
+"Powered by Blue" usa un ancho predeterminado de `180px` y `40px` de padding horizontal. Usar `large` aumenta el ancho a `220px`.
+
+```html
+<blue-footer large></blue-footer>
+```
+
 
 
 ---
