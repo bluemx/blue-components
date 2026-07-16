@@ -70,7 +70,8 @@ for (const file of files) {
         const html = footer.shadowRoot.children[0].innerHTML;
         assert.match(html, /\.cls-1\{fill:#011e41;\}/);
         assert.match(html, /\.cls-2\{fill:#8ab7e9;\}/);
-        assert.match(html, /width: 166px; margin-left: auto;/);
+        assert.match(html, /padding: 4px 40px;/);
+        assert.match(html, /width: 180px; margin-left: auto;/);
     });
 
     test(`${file} uses the large powered-by width`, () => {
@@ -85,7 +86,7 @@ for (const file of files) {
 
         footer.attributes.delete('large');
         footer.attributeChangedCallback('large', '', null);
-        assert.match(footer.shadowRoot.children[0].innerHTML, /width: 166px; margin-left: auto;/);
+        assert.match(footer.shadowRoot.children[0].innerHTML, /width: 180px; margin-left: auto;/);
     });
 
     test(`${file} reacts when dark changes`, () => {
