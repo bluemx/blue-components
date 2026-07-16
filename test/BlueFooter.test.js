@@ -73,6 +73,21 @@ for (const file of files) {
         assert.match(html, /width: 166px; margin-left: auto;/);
     });
 
+    test(`${file} uses the large powered-by width`, () => {
+        const BlueFooter = loadBlueFooter(file);
+        const footer = new BlueFooter();
+
+        assert.ok(BlueFooter.observedAttributes.includes('large'));
+        footer.attributes.add('large');
+        footer.isConnected = true;
+        footer.connectedCallback();
+        assert.match(footer.shadowRoot.children[0].innerHTML, /width: 220px; margin-left: auto;/);
+
+        footer.attributes.delete('large');
+        footer.attributeChangedCallback('large', '', null);
+        assert.match(footer.shadowRoot.children[0].innerHTML, /width: 166px; margin-left: auto;/);
+    });
+
     test(`${file} reacts when dark changes`, () => {
         const BlueFooter = loadBlueFooter(file);
         const footer = new BlueFooter();

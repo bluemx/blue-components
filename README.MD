@@ -84,6 +84,12 @@ Usar `dark` en fondos oscuros cambia a blanco la sección `.cls-1` del logotipo.
 <blue-footer dark></blue-footer>
 ```
 
+Usar `large` aumenta el ancho de "Powered by Blue" de `166px` a `220px`.
+
+```html
+<blue-footer large></blue-footer>
+```
+
 
 
 ---
